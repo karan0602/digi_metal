@@ -28,14 +28,24 @@ function App() {
 
   return (
     <div className="App">
-      {trans?.map((item, index) => (
-        <div className="Transaction-List">
-          <h3>{item?.transactionType == 'SELL' ? 'SOLD' : 'Bought'} </h3>
-          <h3>{item?.totalAmount} </h3>
-          <h3>{item?.transactionDate}</h3>
-          
+      <div className="App-body">
+        <div className="Transaction-list">
+          <h2>Transactions</h2>
+          {trans?.map((item, index) => (
+            <div className="Transaction-item">
+              <h3>{item?.transactionType == "SELL" ? "SOLD" : "Bought"} </h3>
+              <h3>{item?.totalAmount} </h3>
+              <h3>{item?.transactionDate}</h3>
+            </div>
+          ))}
         </div>
-      ))}
+        <div className="Portfolio">
+          <h2>Portfolio</h2>
+        </div>
+        <div className="BuySell">
+          <h2>Buy or Sell</h2>
+        </div>
+      </div>
     </div>
   );
 }

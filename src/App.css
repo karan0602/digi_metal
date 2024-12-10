@@ -28,9 +28,24 @@
   color: #61dafb;
 }
 
-.Transaction-List{
+.App-body {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+}
+
+.Transaction-item{
+  display: flex;
+  flex-direction: row;
+}
+
+.Transaction-list{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: '33%';
+  align-items: stretch;
+  background-color: antiquewhite;
 }
 
 @keyframes App-logo-spin {
